@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('/Inter-Italic-VariableFont_opsz,wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  .bg-gradient-custom {
+    background: linear-gradient(to right,#B16D40, #000000);
+  }
+  .bg-Respons-costum {
+    background: linear-gradient(167.98deg, #B16D40 0%, #4C2F1B 47.92%, #000000 100%);
+
+  }
