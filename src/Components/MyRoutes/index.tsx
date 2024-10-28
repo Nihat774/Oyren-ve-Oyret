@@ -1,5 +1,6 @@
 import { lazy, Suspense } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
+import Loader from "../../ui/Loader";
 const HomePage = lazy(() => import("../../pages/LoginPage"));
 const CreateAccount = lazy(() => import("../../pages/CreateAccount"));
 const AboutPage = lazy(()=>import('../../pages/About'))
@@ -8,7 +9,7 @@ function MyRoutes() {
   const location = useLocation();
   return (
     <>
-      <Suspense fallback="loading">
+      <Suspense fallback={<Loader/>}>
         <Routes location={location}>
           <Route path="/login" element={<HomePage />} />
           <Route path="/create" element={<CreateAccount />} />
