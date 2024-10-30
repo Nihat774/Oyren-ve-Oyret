@@ -1,3 +1,4 @@
+import ScrollToTop from "react-scroll-to-top"
 import LayoutComponents from "./Components/Layout/LayoutComponents"
 import MyRoutes from "./Components/MyRoutes"
 // import CreateAccount from "./pages/CreateAccount"
@@ -10,6 +11,7 @@ function App() {
       <MyRoutes />
       {/* <HomePage /> */}
       {/* <CreateAccount /> */}
+      <ScrollToTop smooth  className="center-flex p-2 "/>
      </LayoutComponents>
     </>
   )

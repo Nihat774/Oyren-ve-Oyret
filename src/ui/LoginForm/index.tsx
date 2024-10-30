@@ -1,9 +1,13 @@
+import { Link } from "react-router-dom";
+
 function LoginForm() {
   return (
     <>
-      <div className="flex gap-5 p-5 xs:rounded-[25px] xs:h-[60vh] xs:w-[80%] md:w-fit md:h-fit md:rounded-[85px]  bg-neutral-400/50 backdrop-blur-lg">
+      <div className="flex gap-5 p-5 rounded-[25px] h-[60vh] w-[90%] md:w-fit md:h-fit md:rounded-[85px]  bg-neutral-400/50 backdrop-blur-lg">
         <form className="flex flex-col justify-evenly items-center">
-          <legend className="text-[1.7rem] text-white">Hesaba giriş</legend>
+          <legend className="text-[1.7rem] text-white center-flex">
+            Hesaba giriş
+          </legend>
           <input
             type="text"
             className="px-4 py-3 md:w-[24vw] xs:w-[90%]  text-[1.3rem] rounded-[15px]"
@@ -16,7 +20,10 @@ function LoginForm() {
             className=" md:w-[24vw] xs:w-[90%] px-4 py-3 text-[1.3rem] rounded-[15px]"
             placeholder="Şifrə"
           />
-          <button className="rounded-[10px] py-3 w-[120px] bg-black text-white">
+          <Link to={"/"} className="text-white hover:text-red-600">
+            Şifrənizi unutdunuz?
+          </Link>
+          <button className="rounded-[10px] py-3 w-[120px] bg-black text-white ">
             Daxil ol
           </button>
         </form>
@@ -29,6 +36,13 @@ function LoginForm() {
               <p className="text-white mt-2 text-[1rem]">
                 Sizi öz aramızda görməkdən məmnunluq duyuruq!
               </p>
+            </div>
+            <div className="h-[30vh] flex flex-col justify-end items-center">
+              <div className="flex  bg-red  gap-3">
+                <p className="w-[60px] rounded-[5px] h-[8px] bg-orange-600 backdrop-blur-lg "></p>
+                <p className="w-[60px] rounded-[5px] h-[8px] bg-white backdrop-blur-lg "></p>
+                <p className="w-[60px] rounded-[5px] h-[8px] bg-white backdrop-blur-lg "></p>
+              </div>
             </div>
           </div>
         </div>

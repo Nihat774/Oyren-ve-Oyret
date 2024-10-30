@@ -1,0 +1,84 @@
+{
+  "cart": [
+    {
+      "id": 1,
+      "image": "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0",
+      "author": "Author 1",
+      "blog": "Blog 1",
+      "reads": 123,
+      "likes": 10
+    },
+    {
+      "id": 2,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTIKNaglscNNY1xovZBldhNGvpYMzJO1GMog&s",
+      "author": "Author 2",
+      "blog": "Blog 2",
+      "reads": 456,
+      "likes": 20
+    },
+    {
+      "id": 3,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiw97MlC4RpaL6QZIu_EFGH4Jxy3JnZEelrw&s",
+      "author": "Author 3",
+      "blog": "Blog 3",
+      "reads": 789,
+      "likes": 30
+    },
+    {
+      "id": 4,
+      "image": "https://images.unsplash.com/photo-1483683804023-6ccdb62f86ef",
+      "author": "Author 4",
+      "blog": "Blog 4",
+      "reads": 101,
+      "likes": 40
+    },
+    {
+      "id": 5,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQOIJKe7zzrkL41E7RHIka0l5SufkIPPWS7j07VvXtjPwmYixrlN5qP3tGsMCgWhJzEjA&usqp=CAU",
+      "author": "Author 5",
+      "blog": "Blog 5",
+      "reads": 202,
+      "likes": 50
+    },
+    {
+      "id": 6,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQOIJKe7zzrkL41E7RHIka0l5SufkIPPWS7j07VvXtjPwmYixrlN5qP3tGsMCgWhJzEjA&usqp=CAU",
+      "author": "Author 6",
+      "blog": "Blog 6",
+      "reads": 303,
+      "likes": 60
+    },
+    {
+      "id": 7,
+      "image": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee",
+      "author": "Author 7",
+      "blog": "Blog 7",
+      "reads": 404,
+      "likes": 70
+    },
+    {
+      "id": 8,
+      "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e",
+      "author": "Author 8",
+      "blog": "Blog 8",
+      "reads": 505,
+      "likes": 80
+    },
+    {
+      "id": 9,
+      "image": "https://images.unsplash.com/photo-1465101046530-73398c7f28ca",
+      "author": "Author 9",
+      "blog": "Blog 9",
+      "reads": 606,
+      "likes": 90
+    },
+    {
+      "id": 10,
+      "image": "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0",
+      "author": "Author 10",
+      "blog": "Blog 10",
+      "reads": 707,
+      "likes": 100
+    }
+  ]
+}

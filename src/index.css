@@ -12,5 +12,13 @@
   }
   .bg-Respons-costum {
     background: linear-gradient(167.98deg, #B16D40 0%, #4C2F1B 47.92%, #000000 100%);
-
   }
+@layer utilities{
+  .center-flex{
+    @apply flex justify-center items-center
+  }
+  body{
+    @apply bg-neutral-900
+  }
+
+}
