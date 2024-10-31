@@ -1,11 +1,12 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 function Footer() {
+  const {pathname} = useLocation()
   return (
     <>
-      <div className="flex md:justify-end xs:justify-between gap-6 bg-gradient-custom text-white  px-7 py-2">
+      <div className={`${(pathname == '/')?"bg-neutral-900":"bg-gradient-custom"} flex md:justify-end xs:justify-between gap-6  text-white  px-7 py-2`}>
         <Link to={'/about'}>Haqqımızda</Link>
-        <Link to={'/şərt və qaydalar'}>Şərt və Tələblər</Link>
+        <Link to={'/sertler'}>Şərt və Tələblər</Link>
       </div>
     </>
   );

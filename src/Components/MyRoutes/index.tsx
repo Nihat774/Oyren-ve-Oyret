@@ -16,7 +16,7 @@ function MyRoutes() {
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<CreateAccount />} />
           <Route path='about' element={<AboutPage/>} />
-          <Route path='/şərt və qaydalar' element={<RegularPage/>} />
+          <Route path='/sertler' element={<RegularPage/>} />
         </Routes>
       </Suspense>
     </>

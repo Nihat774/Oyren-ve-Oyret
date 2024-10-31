@@ -11,6 +11,7 @@
     "server": "npx json-server --watch data.json --port 2030"
   },
   "dependencies": {
+    "formik": "^2.4.6",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.27.0",
