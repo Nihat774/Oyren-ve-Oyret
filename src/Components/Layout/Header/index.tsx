@@ -1,3 +1,5 @@
+import { faHouse } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
 function Header() {
@@ -5,7 +7,13 @@ function Header() {
   let loc = useNavigate();
   return (
     <>
-      <div className={`${(pathname != '/')?"bg-gradient-custom backdrop-blur-lg bg-slate-400/80":"bg-neutral-900"} sticky z-50 top-0 `}>
+      <div
+        className={`${
+          pathname != "/"
+            ? "bg-gradient-custom backdrop-blur-lg bg-slate-400/80"
+            : "bg-neutral-900"
+        } sticky z-50 top-0 `}
+      >
         <div className="container mx-auto flex justify-between  py-3 ">
           <div className="center-flex gap-5">
             <img
@@ -18,13 +26,16 @@ function Header() {
             </Link>
           </div>
 
-          <div className="flex gap-5">
+ 
+
+          <div className="flex gap-5 items-center">
+          <FontAwesomeIcon icon={faHouse} className="text-white text-[1.4rem] cursor-pointer" onClick={()=>loc('/')} />
             <button
               className={`${
-               ( (pathname == "/register") ||
-                (pathname == "/" )||
-                ( pathname == "/about" )||
-               ( pathname == "/sertler"))
+                pathname == "/register" ||
+                pathname == "/" ||
+                pathname == "/about" ||
+                pathname == "/sertler"
                   ? "hidden md:flex"
                   : "flex"
               } hover:bg-black hover:text-white  h-[50px] items-center justify-center md:h-[8vh] w-[120px] rounded-[13px] font-semibold bg-white text-black`}
