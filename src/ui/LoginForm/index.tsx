@@ -1,58 +1,45 @@
-import { Field, Form, Formik } from "formik";
-// import { Link } from "react-router-dom";
+import { ErrorMessage, Field, Form, Formik } from "formik";
+import validationSchema from "../../Validations/SampleSchema"
 
 function LoginForm() {
   return (
     <>
       <div className="flex gap-5 p-5 rounded-[25px] h-[60vh] w-[90%] md:w-fit md:h-fit md:rounded-[85px]  bg-neutral-400/50 backdrop-blur-lg">
-        {/* <form className="flex flex-col w-full justify-evenly items-center">
-          <legend className="text-[1.7rem] text-white center-flex">
-            Hesaba giriş
-          </legend>
-          <input
-            type="text"
-            className="px-4 py-3 w-[90%]  text-[1.3rem] rounded-[15px]"
-            placeholder="E-poçt"
-          />
-          <input
-            type="password"
-            name=""
-            id=""
-            className=" w-[90%] px-4 py-3 text-[1.3rem] rounded-[15px]"
-            placeholder="Şifrə"
-          />
-          
-          <Link to={"/"} className="text-white hover:text-red-600">
-            Şifrənizi unutdunuz?
-          </Link>
-          <Link to={"/register"} className="text-white hover:text-red-600">
-            Hesabınız yoxdur?
-          </Link>
-          <button className="rounded-[10px] py-3 w-[120px] bg-black text-white ">
-            Daxil ol
-          </button>
-        </form> */}
-
         <Formik
           initialValues={{
-            email: "",
+            text: "",
             password: "",
           }}
+          validationSchema={validationSchema}
           onSubmit={(values) => console.log(values)}
         >
           <Form className="flex flex-col w-full justify-evenly items-center">
-            <Field
-              type="email"
-              name="email"
-              placeholder="E-poçt"
-              className="px-4 py-3 w-[90%]  text-[1.3rem] rounded-[15px]"
-            />
-            <Field
-              type="password"
-              name="password"
-              placeholder="Şifrə"
-              className=" w-[90%] px-4 py-3 text-[1.3rem] rounded-[15px]"
-            />
+            <label htmlFor="text">
+              <Field
+                type="text"
+                name="text"
+                placeholder="E-poçt"
+                className="w-full py-3  text-[1.3rem] rounded-[15px]"
+              />
+              <ErrorMessage
+                name="text"
+                component="div"
+                render={(msg) => <div className="text-red-500 font-semibold p-2 ">{msg}</div>}
+              />
+            </label>
+            <label htmlFor="password">
+              <Field
+                type="password"
+                name="password"
+                placeholder="Şifrə"
+                className=" w-full px-4 py-3 text-[1.3rem] rounded-[15px]"
+              />
+              <ErrorMessage
+                name="password"
+                component="div"
+                render={(msg) => <div className="text-red-500 font-semibold p-2">{msg}</div>}
+              />
+            </label>
             <button
               type="submit"
               className="rounded-[10px] py-3 w-[120px] bg-black text-white "

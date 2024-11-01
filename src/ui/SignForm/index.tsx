@@ -1,6 +1,8 @@
-import { Field, Form, Formik } from "formik";
+import { ErrorMessage, Field, Form, Formik } from "formik";
+import validationSchema from "../../Validations/SampleSchema";
 
 function SignForm() {
+
   return (
     <>
       <div className="flex gap-5 p-5 xs:rounded-[25px] xs:h-[60vh] xs:w-[90%] md:w-fit md:h-fit md:rounded-[85px]  bg-neutral-400/50 backdrop-blur-lg">
@@ -21,63 +23,68 @@ function SignForm() {
           </div>
         </div>
 
-        {/* <form className="flex flex-col justify-evenly items-center w-full">
-          <legend className="text-[1.7rem] text-white">Hesab Yaradın</legend>
-          <input
-            type="text"
-            className="px-4 py-3 md:w-[80%] xs:w-[80%]  md:text-[1.3rem] xs:text-[1.1rem] rounded-[15px]"
-            placeholder="E-poçt"
-          />
-          <input
-            type="password"
-            name=""
-            id=""
-            className=" w-[80%] px-4 py-3 md:text-[1.3rem] xs:text-[1.1rem] rounded-[15px]"
-            placeholder="Şifrə"
-          />
-          <input
-            type="password"
-            name=""
-            id=""
-            className="w-[80%] px-4 py-3 md:text-[1.3rem] xs:text-[1.1rem] rounded-[15px]"
-            placeholder="Təkrar şifrə"
-          />
-          <button className="rounded-[10px] py-3 w-[120px] bg-black text-white">
-            Növbəti
-          </button>
-        </form> */}
-
         <Formik
           initialValues={{
-            email: "",
-            password:"",
+            text: "",
+            password: "",
             repeatPassword: "",
           }}
-          onSubmit={(values) => console.log(values)}
+          onSubmit={(values) =>console.log(values)
+          }
+          validationSchema={validationSchema}
         >
           <Form className="flex flex-col justify-evenly items-center w-full">
             <legend className="text-[1.7rem] text-white">Hesab Yaradın</legend>
-            <Field
-              type="email"
-              name="email"
-              placeholder="E-poçt"
-              className="px-4 py-3 md:w-[80%] xs:w-[80%]  md:text-[1.3rem] xs:text-[1.1rem] rounded-[15px]"
-            />
-            <Field
-              type="password"
-              name="password"
-              placeholder="Şifrə"
-              className="w-[80%] px-4 py-3 md:text-[1.3rem] xs:text-[1.1rem] rounded-[15px]"
-            />
-            <Field
-              type="password"
-              name="repeatPassword"
-              placeholder="Təkrar şifrə"
-              className="w-[80%] px-4 py-3 md:text-[1.3rem] xs:text-[1.1rem] rounded-[15px]"
-            />
-             <button className="rounded-[10px] py-3 w-[120px] bg-black text-white">
-            Növbəti
-          </button>
+            <label htmlFor="text">
+              <Field
+                type="text"
+                name="text"
+                placeholder="E-poçt"
+                className="px-4 py-3 w-full  md:text-[1.3rem] xs:text-[1.1rem] rounded-[15px]"
+              />
+              <ErrorMessage
+                name="text"
+                component="div"
+                render={(msg) => (
+                  <div className="p-2 text-red-500 font-semibold">{msg}</div>
+                )}
+              />
+            </label>
+
+            <label htmlFor="password">
+              <Field
+                type="password"
+                name="password"
+                placeholder="Şifrə"
+                className="w-full px-4 py-3 md:text-[1.3rem] xs:text-[1.1rem] rounded-[15px]"
+              />
+              <ErrorMessage
+                name="password"
+                component="div"
+                render={(msg) => (
+                  <div className="p-2 text-red-500 font-semibold">{msg}</div>
+                )}
+              />
+            </label>
+
+            <label htmlFor="repeatPassword">
+              <Field
+                type="password"
+                name="repeatPassword"
+                placeholder="Təkrar şifrə"
+                className="w-full px-4 py-3 md:text-[1.3rem] xs:text-[1.1rem] rounded-[15px]"
+              />
+              <ErrorMessage
+                name="repeatPassword"
+                component="div"
+                render={(msg) => (
+                  <div className="p-2 text-red-500 font-semibold">{msg}</div>
+                )}
+              />
+            </label>
+            <button type="submit" className="rounded-[10px] py-3 w-[120px] bg-black text-white">
+              Növbəti
+            </button>
           </Form>
         </Formik>
       </div>
