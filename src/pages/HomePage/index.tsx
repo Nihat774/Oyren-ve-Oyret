@@ -1,23 +1,30 @@
-import React, { useEffect, useState } from "react";
-
+import  React, { useEffect, useState } from "react";
 
 function HomePage() {
-  const url = "http://localhost:2030/cart";
-  const [data, setData] = useState([]);
-  useEffect(() => {
-    fetch(url)
-      .then((response) => response.json())
-      .then((data) => setData(data));
-  });
+  const url = "https://faux-api.com/api/v1/blog_5522944561456351";
+  const [data, setData] = useState<null | Array<any>>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<null | string>(null);
+
+  async function fetchData(){
+    const res =  await fetch(url)
+    const results = await res.json()
+    setData(results)
+    return results
+  }
+  
+  useEffect(()=>{
+    fetchData()
+  },[])
+
+
   return (
     <>
       <div>
         <div className="container mx-auto">
           <div className="py-7 ">
             <p className="text-white p-3 text-[1.4rem]">Hamısı</p>
-            <div>
-          
-            </div>
+            <div></div>
             <div className="flex justify-center gap-5 py-7">
               <button className="cursor-pointer lg:p-3 p-2 rounded-[15px] bg-white text-black w-[36vw] lg:w-[15vw]">
                 Bloglar
@@ -27,7 +34,8 @@ function HomePage() {
               </button>
             </div>
             <section className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 ">
-              {data.map(({ id, image, blog, author, likes, reads }) => {
+              {
+              results.map(({ id, image, blog, author, likes, reads }) => {
                 return (
                   <React.Fragment key={id}>
                     <div className="rounded-[20px] text-white p-5 cursor-pointer hover:scale-105 duration-500">

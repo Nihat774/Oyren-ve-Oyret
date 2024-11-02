@@ -4,7 +4,7 @@ import validationSchema from "../../Validations/SampleSchema"
 function LoginForm() {
   return (
     <>
-      <div className="flex gap-5 p-5 rounded-[25px] h-[60vh] w-[90%] md:w-fit md:h-fit md:rounded-[85px]  bg-neutral-400/50 backdrop-blur-lg">
+      <div className="flex gap-5 p-5 rounded-[25px] h-[45vh] w-[90%] md:w-fit md:h-fit md:rounded-[45px]  bg-neutral-400/50 backdrop-blur-lg">
         <Formik
           initialValues={{
             text: "",
@@ -19,12 +19,12 @@ function LoginForm() {
                 type="text"
                 name="text"
                 placeholder="E-poçt"
-                className="w-full py-3  text-[1.3rem] rounded-[15px]"
+                className="class-input"
               />
               <ErrorMessage
                 name="text"
                 component="div"
-                render={(msg) => <div className="text-red-500 font-semibold p-2 ">{msg}</div>}
+                render={(msg) => <div className="error-message">{msg}</div>}
               />
             </label>
             <label htmlFor="password">
@@ -32,12 +32,12 @@ function LoginForm() {
                 type="password"
                 name="password"
                 placeholder="Şifrə"
-                className=" w-full px-4 py-3 text-[1.3rem] rounded-[15px]"
+                className="class-input"
               />
               <ErrorMessage
                 name="password"
                 component="div"
-                render={(msg) => <div className="text-red-500 font-semibold p-2">{msg}</div>}
+                render={(msg) => <div className="error-message">{msg}</div>}
               />
             </label>
             <button
@@ -49,7 +49,7 @@ function LoginForm() {
           </Form>
         </Formik>
 
-        <div className="xs:hidden md:flex h-[69.5vh] w-[25vw] p-3 rounded-[20%]  justify-center bg-[url('/LoginForm-bg-image.png')] bg-cover">
+        <section className="xs:hidden md:flex h-[62.3vh] w-[25vw] rounded-[10%] p-3 justify-center bg-[url('/LoginForm-bg-image.png')] bg-cover">
           <div className="rounded-[40px]">
             <div className="bg-neutral-400/50 backdrop-blur-lg rounded-[40px] mt-5 text-center w-[20vw] p-5 h-[30vh] flex flex-col justify-center">
               <p className="text-white text-lg font-semibold">
@@ -59,7 +59,7 @@ function LoginForm() {
                 Sizi öz aramızda görməkdən məmnunluq duyuruq!
               </p>
             </div>
-            <div className="h-[30vh] flex flex-col justify-end items-center">
+            <div className="h-[23vh] flex flex-col justify-end items-center">
               <div className="flex  bg-red  gap-3">
                 <p className="w-[60px] rounded-[5px] h-[8px] bg-orange-600 backdrop-blur-lg "></p>
                 <p className="w-[60px] rounded-[5px] h-[8px] bg-white backdrop-blur-lg "></p>
@@ -67,7 +67,7 @@ function LoginForm() {
               </div>
             </div>
           </div>
-        </div>
+        </section>
       </div>
     </>
   );

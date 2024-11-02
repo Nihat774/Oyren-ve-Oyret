@@ -4,7 +4,7 @@ function RegularPage() {
 
       <div className="bg-neutral-900">
         <div className="md:container md:mx-auto  center-flex flex-col h-fit w-full md:w-[70vw] py-5">
-          <section className="border  w-[90%] h-[90%] bg-white p-7 rounded-[10px]">
+          <section className="border  w-[90%] min-h-[80vh] h-[90%] bg-white p-7 rounded-[10px]">
             <p className="font-bold text-[1.7rem] pb-2">Şərtlər və Qaydalar</p>
             Şərtlər və Qaydalar “Öyrən və Öyrət” platformasına qoşulan hər bir
           istifadəçi qeyd olunan şərtləri qəbul etmiş sayılır. İstifadəçilər,

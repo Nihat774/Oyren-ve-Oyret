@@ -2,8 +2,8 @@ function AboutPage() {
   return (
     <>
       <div className="bg-neutral-900">
-        <div className="md:container md:mx-auto  center-flex flex-col h-fit w-full md:w-[60vw] py-5">
-          <section className="border  w-[90%] h-[90%] bg-white p-9 rounded-[10px]">
+        <div className="md:container md:mx-auto  center-flex flex-col h-fit  w-full md:w-[60vw] py-5">
+          <section className="border  w-[90%] h-[90%] min-h-[80vh] bg-white p-9 rounded-[10px]">
             <p className="font-bold text-[1.7rem] pb-3">Haqqımızda</p>
             “Öyrən və Öyrət” platforması təhsil sahəsində innovativ bir yanaşma
             ilə fərqlənən, biliklərin paylaşıldığı və yeniliklərin öyrənildiyi
