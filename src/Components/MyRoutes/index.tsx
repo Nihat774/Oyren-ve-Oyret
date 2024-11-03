@@ -7,6 +7,7 @@ const CreateAccount = lazy(() => import("../../pages/CreateAccount"));
 const AboutPage = lazy(() => import("../../pages/About"));
 const RegularPage = lazy(() => import("../../pages/Regular"));
 const HomePage = lazy(() => import("../../pages/HomePage"));
+const NotFoundPage = lazy(()=>import("../../pages/404NotFound"))
 function MyRoutes() {
   const location = useLocation();
   return (
@@ -19,6 +20,7 @@ function MyRoutes() {
             <Route path="/register" element={<CreateAccount />} />
             <Route path="about" element={<AboutPage />} />
             <Route path="/sertler" element={<RegularPage />} />
+            <Route path="*" element={<NotFoundPage/>} />
           </Routes>
         </AnimatePresence>
       </Suspense>

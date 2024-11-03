@@ -1072,6 +1072,10 @@ html {
   height: max-content;
 }
 
+.h-\[75\.5vh\] {
+  height: 75.5vh;
+}
+
 .min-h-\[70\.2vh\] {
   min-height: 70.2vh;
 }
