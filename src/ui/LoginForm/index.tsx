@@ -4,7 +4,7 @@ import validationSchema from "../../Validations/SampleSchema"
 function LoginForm() {
   return (
     <>
-      <div className="flex gap-5 p-5 rounded-[25px] h-[45vh] w-[90%] md:w-fit md:h-fit md:rounded-[45px]  bg-neutral-400/50 backdrop-blur-lg">
+      <div className="flex gap-5 p-5 rounded-[25px] h-[47vh] w-[90%] md:w-fit md:h-fit md:rounded-[45px]  bg-neutral-400/50 backdrop-blur-lg">
         <Formik
           initialValues={{
             text: "",

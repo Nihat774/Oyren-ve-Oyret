@@ -17,7 +17,7 @@ function HomePage() {
                 Anonim paylaşımlar
               </button>
             </div>
-            <section className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5 xs:place-items-center md:place-items-start">
+            <section className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-7 xs:place-items-center">
               <Blogs/>
 
             </section>
