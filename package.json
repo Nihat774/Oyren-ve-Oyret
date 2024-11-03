@@ -9,7 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "server": "npx json-server --watch data.json --port 2030",
-    "tailwind":"npx tailwindcss -i ./src/index.css -o ./src/output.css --watch"
+    "tailwind": "npx tailwindcss -i ./src/index.css -o ./src/output.css --watch"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.6.0",
@@ -19,6 +19,7 @@
     "axios": "^1.7.7",
     "font-awesome": "^4.7.0",
     "formik": "^2.4.6",
+    "framer-motion": "^11.11.11",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.27.0",

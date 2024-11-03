@@ -33,7 +33,7 @@ function Header() {
           pathname === "/sertler"
             ? "hidden md:flex"
             : "flex"
-        } hover:bg-black hover:text-white  bg-white text-black header-button `}
+        } hover:bg-black hover:text-white  bg-white text-black header-button h-max`}
         onClick={() => loc("/register")}
       >
         Hesab yarat
@@ -41,7 +41,7 @@ function Header() {
       <button
         className={`${
           pathname === "/login" ? "hidden md:flex" : "flex"
-        } hover:bg-white  hover:text-neutral-900  bg-black text-white header-button`}
+        } hover:bg-white  hover:text-neutral-900  bg-black text-white header-button h-max`}
         onClick={() => loc("/login")}
       >
         Daxil ol

@@ -29,7 +29,7 @@ const Blogs: React.FC = () => {
               data.result.map(({ id, image, blog, author, likes, reads }:Blog) => {
                 return (
                   <React.Fragment key={id}>
-                    <div className="rounded-[20px] text-white w-[90vw] md:w-[45vw] lg:w-[30vw] p-3 cursor-pointer md:hover:scale-105 xs:hover:scale-[1.04] duration-500 ">
+                    <div className="rounded-[20px] text-white  p-3 cursor-pointer md:hover:scale-105 xs:hover:scale-[1.04] duration-500 ">
                       <div className=" h-[30vh]  ">
                         <img
                           className="w-full h-full object-cover rounded-t-[20px]"
