@@ -42,7 +42,7 @@ function LoginForm() {
             </label>
             <button
               type="submit"
-              className="rounded-[10px] py-3 w-[120px] bg-black text-white "
+              className="form-button "
             >
               Daxil ol
             </button>

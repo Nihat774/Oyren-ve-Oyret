@@ -13,7 +13,7 @@ function SignPage() {
         <SignForm />
       </div>
       {/* phone */}
-      <div className="xs:flex md:hidden bg-Respons-costum h-[81vh] justify-center items-center">
+      <div className="xs:flex md:hidden bg-Respons-costum h-[74.2vh] justify-center items-center">
         <SignForm />
       </div>
     </>

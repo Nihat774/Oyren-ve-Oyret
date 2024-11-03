@@ -5,7 +5,7 @@ function HomePage() {
   return (
     <>
       <div>
-        <div className="container mx-auto">
+        <div className="container mx-auto md:min-h-[90vh] ">
           <div className="py-7 ">
             <p className="text-white p-3 text-[1.4rem]">Hamısı</p>
             <div></div>
@@ -17,7 +17,7 @@ function HomePage() {
                 Anonim paylaşımlar
               </button>
             </div>
-            <section className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 ">
+            <section className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 xs:place-items-center md:place-items-start">
               <Blogs/>
 
             </section>

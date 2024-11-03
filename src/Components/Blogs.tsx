@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import useSWR from 'swr';
+import Loader from '../ui/Loader';
 interface Blog{
     id:number;
     image:string;
@@ -16,11 +17,11 @@ const Blogs: React.FC = () => {
   const { data, error, isLoading } = useSWR(url, fetcher)
   if (error){
     console.log(error)
-    return (<div>failed to load</div>)
+    return (<div className='text-white text-[1.2rem]'>Məlumat bazasında xəta baş verdi. Yenidən cəhd edin.</div>)
   }
   
   console.log(data)
-  if(isLoading) return <>Loading</>
+  if(isLoading) return <div className='text-white text-[1.4rem] center-flex w-[90vw]'><Loader/></div>
   
   return (
    <>
@@ -28,8 +29,8 @@ const Blogs: React.FC = () => {
               data.result.map(({ id, image, blog, author, likes, reads }:Blog) => {
                 return (
                   <React.Fragment key={id}>
-                    <div className="rounded-[20px] text-white p-5 cursor-pointer hover:scale-105 duration-500">
-                      <div className=" h-[30vh] ">
+                    <div className="rounded-[20px] text-white w-[90vw] md:w-[45vw] lg:w-[30vw] p-3 cursor-pointer md:hover:scale-105 xs:hover:scale-[1.04] duration-500 ">
+                      <div className=" h-[30vh]  ">
                         <img
                           className="w-full h-full object-cover rounded-t-[20px]"
                           src={image}

@@ -2,10 +2,11 @@ function AboutPage() {
   return (
     <>
       <div className="bg-neutral-900">
-        <div className="md:container md:mx-auto  center-flex flex-col h-fit  w-full md:w-[60vw] py-5">
-          <section className="border  w-[90%] h-[90%] min-h-[80vh] bg-white p-9 rounded-[10px]">
-            <p className="font-bold text-[1.7rem] pb-3">Haqqımızda</p>
-            “Öyrən və Öyrət” platforması təhsil sahəsində innovativ bir yanaşma
+        <div className="footer-container">
+          <section className="footer-page min-h-[70.2vh] ">
+            <p className="font-bold text-[1.7rem] pb-1 ">Haqqımızda</p>
+           <p className="text-[1.12rem]">
+           “Öyrən və Öyrət” platforması təhsil sahəsində innovativ bir yanaşma
             ilə fərqlənən, biliklərin paylaşıldığı və yeniliklərin öyrənildiyi
             bir mərkəzdir. Burada hər yaş qrupundan olan istifadəçilər üçün
             geniş məlumat bazası və müxtəlif mövzularda tədris resursları
@@ -20,10 +21,8 @@ function AboutPage() {
             praktiki təlimlər mövcuddur ki, istifadəçilər daha effektiv şəkildə
             yeni biliklər qazansınlar. Bundan əlavə, istifadəçilər öz aralarında
             müzakirələr apararaq, öyrənmə prosesini daha əyləncəli və mənalı
-            hala gətirirlər. “Öyrən və Öyrət”in əsas dəyərlərindən biri, hər
-            kəsin öz tədris və təlim təcrübəsini başqaları ilə bölüşməyə təşviq
-            etməkdir. Biz inanırıq ki, öyrənmə prosesi yalnız fərdi deyil,
-            kollektiv şəkildə daha uğurlu olur. 
+            hala gətirirlər. 
+           </p>
           </section>
         </div>
       </div>
