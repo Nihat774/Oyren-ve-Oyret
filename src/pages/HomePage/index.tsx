@@ -1,6 +1,20 @@
 import ScrollAnimation from "../../Components/animations/ScrollAnimation";
 import Blogs from "../../Components/Blogs";
+import { motion } from "framer-motion";
 function HomePage() {
+  const container = {
+    hidden: { opacity: 1, scale: 0 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        delayChildren: 0.6,
+        staggerChildren: 0.5,
+      },
+    },
+  };
+
+ 
   return (
     <>
       <div>
@@ -17,9 +31,14 @@ function HomePage() {
                   Anonim paylaşımlar
                 </button>
               </div>
-              <section className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-7 xs:place-items-center">
+              <motion.div
+                variants={container}
+                initial="hidden"
+                animate="visible"
+                className="container grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-7 xs:place-items-center"
+              >
                 <Blogs />
-              </section>
+              </motion.div>
             </div>
           </div>
         </ScrollAnimation>

@@ -37,7 +37,7 @@
     @apply md:container md:mx-auto  center-flex flex-col h-fit w-full md:w-[80vw] lg:w-[70vw] py-3 text-black
   }
   .header-button{
-    @apply h-max items-center justify-center duration-500 md:h-[8vh] w-[120px] rounded-[13px] py-2 md:py-0 font-semibold
+    @apply items-center justify-center duration-500 w-[120px] rounded-[13px] py-3 font-semibold
   }
 
 }

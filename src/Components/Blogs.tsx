@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import useSWR from 'swr';
 import Loader from '../ui/Loader';
+import {motion} from "framer-motion"
 interface Blog{
     id:number;
     image:string;
@@ -21,15 +22,22 @@ const Blogs: React.FC = () => {
   }
   
   console.log(data)
-  if(isLoading) return <div className='text-white text-[1.4rem] center-flex w-[90vw]'><Loader/></div>
+  if(isLoading) return <div className='text-white text-[1.4rem] flex justify-center w-[90vw]'><Loader/></div>
   
+  const item = {
+    hidden: { x: 20, opacity: 0 },
+    visible: {
+      x: 0,
+      opacity: 1,
+    },
+  };
   return (
    <>
      {
               data.result.map(({ id, image, blog, author, likes, reads }:Blog) => {
                 return (
                   <React.Fragment key={id}>
-                    <div className="rounded-[20px] text-white  p-3 cursor-pointer md:hover:scale-105 xs:hover:scale-[1.04] duration-500 ">
+                    <motion.div  variants={item} className="item rounded-[20px] text-white  p-3 cursor-pointer md:hover:scale-105 xs:hover:scale-[1.04] duration-500 ">
                       <div className=" h-[30vh]  ">
                         <img
                           className="w-full h-full object-cover rounded-t-[20px]"
@@ -71,7 +79,7 @@ const Blogs: React.FC = () => {
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </motion.div>
                   </React.Fragment>
                 );
               })}

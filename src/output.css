@@ -933,6 +933,10 @@ html {
   width: 320px;
 }
 
+.visible {
+  visibility: visible;
+}
+
 .fixed {
   position: fixed;
 }
@@ -1027,8 +1031,8 @@ html {
   height: 47vh;
 }
 
-.h-\[60vh\] {
-  height: 60vh;
+.h-\[59\.7vh\] {
+  height: 59.7vh;
 }
 
 .h-\[62\.3vh\] {
@@ -1037,6 +1041,10 @@ html {
 
 .h-\[74\.2vh\] {
   height: 74.2vh;
+}
+
+.h-\[75\.5vh\] {
+  height: 75.5vh;
 }
 
 .h-\[7vh\] {
@@ -1055,25 +1063,9 @@ html {
   height: 100%;
 }
 
-.h-\[59\.5vh\] {
-  height: 59.5vh;
-}
-
-.h-\[59\.\.7vh\] {
-  height: 59..7vh;
-}
-
-.h-\[59\.7vh\] {
-  height: 59.7vh;
-}
-
 .h-max {
   height: -moz-max-content;
   height: max-content;
-}
-
-.h-\[75\.5vh\] {
-  height: 75.5vh;
 }
 
 .min-h-\[70\.2vh\] {
@@ -1212,10 +1204,6 @@ html {
   border-radius: 5px;
 }
 
-.rounded-md {
-  border-radius: 0.375rem;
-}
-
 .rounded-b-\[20px\] {
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
@@ -1291,10 +1279,6 @@ html {
 
 .p-5 {
   padding: 1.25rem;
-}
-
-.p-6 {
-  padding: 1.5rem;
 }
 
 .px-2 {
@@ -1411,11 +1395,6 @@ html {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.text-blue-600 {
-  --tw-text-opacity: 1;
-  color: rgb(37 99 235 / var(--tw-text-opacity));
 }
 
 .backdrop-blur-lg {
@@ -1551,24 +1530,14 @@ body {
 }
 
 .header-button {
-  height: -moz-max-content;
-  height: max-content;
   width: 120px;
   align-items: center;
   justify-content: center;
   border-radius: 13px;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
   font-weight: 600;
   transition-duration: 500ms;
-}
-
-@media (min-width: 1024px) {
-  .header-button {
-    height: 8vh;
-    padding-top: 0px;
-    padding-bottom: 0px;
-  }
 }
 
 @font-face {
@@ -1667,10 +1636,6 @@ body {
     min-height: 90vh;
   }
 
-  .md\:w-\[45vw\] {
-    width: 45vw;
-  }
-
   .md\:w-fit {
     width: -moz-fit-content;
     width: fit-content;
@@ -1715,10 +1680,6 @@ body {
 
   .lg\:w-\[15vw\] {
     width: 15vw;
-  }
-
-  .lg\:w-\[30vw\] {
-    width: 30vw;
   }
 
   .lg\:grid-cols-3 {
