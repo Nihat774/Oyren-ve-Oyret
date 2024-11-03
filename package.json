@@ -8,7 +8,8 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "server": "npx json-server --watch data.json --port 2030"
+    "server": "npx json-server --watch data.json --port 2030",
+    "tailwind":"npx tailwindcss -i ./src/index.css -o ./src/output.css --watch"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.6.0",
