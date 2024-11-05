@@ -1088,6 +1088,10 @@ html {
   height: 76.2vh;
 }
 
+.h-\[76\.1vh\] {
+  height: 76.1vh;
+}
+
 .min-h-\[70\.2vh\] {
   min-height: 70.2vh;
 }
@@ -1102,6 +1106,14 @@ html {
 
 .min-h-\[72vh\] {
   min-height: 72vh;
+}
+
+.min-h-\[72\.4vh\] {
+  min-height: 72.4vh;
+}
+
+.min-h-\[72\.3vh\] {
+  min-height: 72.3vh;
 }
 
 .w-\[10px\] {
