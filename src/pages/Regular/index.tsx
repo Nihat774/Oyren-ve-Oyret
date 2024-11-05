@@ -6,7 +6,7 @@ function RegularPage() {
       <ScrollAnimation>
         <div className="bg-neutral-900">
           <div className="footer-container">
-            <section className="footer-page min-h-[71vh]">
+            <section className="footer-page min-h-[72vh]">
               <p className="font-bold text-[1.7rem] pb-1">
                 Şərtlər və Qaydalar
               </p>
