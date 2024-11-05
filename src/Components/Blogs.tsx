@@ -22,7 +22,7 @@ const Blogs: React.FC = () => {
   }
   
   console.log(data)
-  if(isLoading) return <div className='text-white text-[1.4rem] flex justify-center w-[90vw]'><Loader/></div>
+  if(isLoading) return <Loader/>
   
   const item = {
     hidden: { x: 20, opacity: 0 },
