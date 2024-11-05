@@ -1088,6 +1088,10 @@ html {
   min-height: 70.3vh;
 }
 
+.min-h-\[71vh\] {
+  min-height: 71vh;
+}
+
 .w-\[10px\] {
   width: 10px;
 }
@@ -1396,6 +1400,10 @@ html {
 .text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
+}
+
+.text-\[1\.5rem\] {
+  font-size: 1.5rem;
 }
 
 .font-bold {

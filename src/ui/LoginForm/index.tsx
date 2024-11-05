@@ -14,6 +14,7 @@ function LoginForm() {
           onSubmit={(values) => console.log(values)}
         >
           <Form className="flex flex-col w-full justify-evenly items-center">
+          <p className="text-[1.5rem] text-white flex justify-center">Hesaba giriş</p>
             <label htmlFor="text">
               <Field
                 type="text"
