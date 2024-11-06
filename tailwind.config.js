@@ -1,25 +1,24 @@
 module.exports = {
-  content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
-  ],
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  future: {
+    hoverOnlyWhenSupported: true,
+  },
   theme: {
     screens: {
-      'xs': '340px',
+      xs: "340px",
       // => @media (min-width: 640px) { ... }
 
-      'md': '1024px',
+      md: "1024px",
       // => @media (min-width: 1024px) { ... }
 
-      'lg': '1280px',
+      lg: "1280px",
       // => @media (min-width: 1280px) { ... }
     },
     extend: {
       fontFamily: {
-        custom: ['MyCustomFont', 'sans-serif'], // Yeni font əlavə olunur
+        custom: ["MyCustomFont", "sans-serif"], // Yeni font əlavə olunur
       },
     },
   },
-  plugins: [
-    require('daisyui'),
-  ],
-}
+  plugins: [require("daisyui")],
+};
