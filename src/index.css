@@ -25,7 +25,7 @@
    @apply p-2 text-red-500 font-semibold
   }
   .form-button{
-    @apply rounded-[10px] py-3 w-[120px] bg-black text-white duration-500 hover:bg-white hover:text-black hover:border-black hover:font-semibold
+    @apply rounded-[10px] py-3 w-[120px] bg-black text-white duration-500 md:hover:bg-white md:hover:text-black md:hover:border-black md:hover:font-semibold
   }
   body{
     @apply bg-neutral-900
