@@ -1,3 +1,5 @@
+
+
 import ScrollAnimation from "../../Components/animations/ScrollAnimation";
 import Blogs from "../../Components/Blogs";
 import { motion } from "framer-motion";
@@ -13,8 +15,6 @@ function HomePage() {
       },
     },
   };
-
- 
   return (
     <>
       <div>

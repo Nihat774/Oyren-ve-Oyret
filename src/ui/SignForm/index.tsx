@@ -1,8 +1,10 @@
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import validationSchema from "../../Validations/SampleSchema";
 
+
 function SignForm() {
 
+  // const url = "https://oyrenoyret.koljan.net/public/api/auth/login";
   return (
     <>
       <div className="flex gap-5 p-5 xs:rounded-[25px] xs:h-[65vh] xs:w-[90%] md:w-fit md:h-fit md:rounded-[40px]  bg-neutral-400/50 backdrop-blur-lg">
@@ -29,8 +31,7 @@ function SignForm() {
             password: "",
             repeatPassword: "",
           }}
-          onSubmit={(values) =>console.log(values)
-          }
+          onSubmit={(values) => console.log(values)}
           validationSchema={validationSchema}
         >
           <Form className="flex flex-col justify-evenly items-center w-full">
@@ -45,9 +46,7 @@ function SignForm() {
               <ErrorMessage
                 name="text"
                 component="div"
-                render={(msg) => (
-                  <div className="error-message">{msg}</div>
-                )}
+                render={(msg) => <div className="error-message">{msg}</div>}
               />
             </label>
 
@@ -61,9 +60,7 @@ function SignForm() {
               <ErrorMessage
                 name="password"
                 component="div"
-                render={(msg) => (
-                  <div className="error-message">{msg}</div>
-                )}
+                render={(msg) => <div className="error-message">{msg}</div>}
               />
             </label>
 
@@ -77,9 +74,7 @@ function SignForm() {
               <ErrorMessage
                 name="repeatPassword"
                 component="div"
-                render={(msg) => (
-                  <div className="error-message">{msg}</div>
-                )}
+                render={(msg) => <div className="error-message">{msg}</div>}
               />
             </label>
             <button type="submit" className="form-button">

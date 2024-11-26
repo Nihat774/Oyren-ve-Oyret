@@ -6,7 +6,7 @@ function AboutPage() {
       <ScrollAnimation>
         <div className="bg-neutral-900">
           <div className="footer-container">
-            <section className="footer-page min-h-[72.3vh] ">
+            <section className="footer-page min-h-[70.3vh] ">
               <p className="font-bold text-[1.7rem] pb-1 ">Haqqımızda</p>
               <p className="text-[1.12rem]">
                 “Öyrən və Öyrət” platforması təhsil sahəsində innovativ bir

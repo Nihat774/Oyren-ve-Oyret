@@ -1,10 +1,9 @@
 import { ErrorMessage, Field, Form, Formik } from "formik";
-import validationSchema from "../../Validations/SampleSchema"
-
+import validationSchema from "../../Validations/SampleSchema";
 function LoginForm() {
   return (
     <>
-      <div className="flex gap-5 p-5 rounded-[25px] h-[47vh] w-[90%] md:w-fit md:h-fit md:rounded-[45px]  bg-neutral-400/50 backdrop-blur-lg">
+      <div className="flex gap-5 md:p-5 rounded-[25px] h-[55vh] w-[90%] md:w-fit md:h-fit md:rounded-[45px]  bg-neutral-400/50 backdrop-blur-lg">
         <Formik
           initialValues={{
             text: "",
@@ -14,7 +13,9 @@ function LoginForm() {
           onSubmit={(values) => console.log(values)}
         >
           <Form className="flex flex-col w-full justify-evenly items-center">
-          <p className="text-[1.5rem] text-white flex justify-center">Hesaba giriş</p>
+            <p className="text-[1.5rem] text-white flex justify-center">
+              Hesaba giriş
+            </p>
             <label htmlFor="text">
               <Field
                 type="text"
@@ -41,10 +42,7 @@ function LoginForm() {
                 render={(msg) => <div className="error-message">{msg}</div>}
               />
             </label>
-            <button
-              type="submit"
-              className="form-button "
-            >
+            <button type="submit" className="form-button ">
               Daxil ol
             </button>
           </Form>
