@@ -1,45 +1,26 @@
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import validationSchema from "../../Validations/SampleSchema";
-import { useEffect, useState } from "react";
-// import Swiper from "swiper";
+import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 function SignForm() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [csrfToken, setCsrfToken] = useState("");
   const [message, setMessage] = useState("");
-
-  // CSRF tokenini almaq üçün useEffect
-  useEffect(() => {
-    fetch("https://oyrenoyret.koljan.net/public/csrf-token", {
-      credentials: "include", // Cookie'leri göndərmək üçün
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        setCsrfToken(data.csrf_token);
-      })
-      .catch((error) => {
-        console.error("CSRF token alınamadı:", error);
-        setMessage("CSRF token alınamadı.");
-      });
-  }, []);
 
   // Submit işləmə funksiyası
   function handleSubmit(e: any) {
     e.preventDefault();
-    if (!csrfToken) {
-      setMessage("CSRF tokeni yoxdur");
-    }
+  
 
     fetch("https://oyrenoyret.koljan.net/public/api/auth/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "X-CSRF-TOKEN": csrfToken, // CSRF tokeni ekle
+       
       },
-      body: JSON.stringify({ email, password, csrf_token: csrfToken }),
-      credentials: "include", // Cookie'leri göndərmək üçün
+      body: JSON.stringify({ email, password }),
+      credentials: "include",
     })
       .then((response) => {
         if (!response.ok) {
@@ -59,7 +40,7 @@ function SignForm() {
         setMessage("Giriş başarısız, bilgilerinizi kontrol edin.");
       });
 
-    console.log("Token: " + csrfToken);
+    console.log("Token: " );
   }
 
   const [currentSlide, setCurrentSlide] = useState(1); // Hal-hazırda göstərilən slayd
@@ -76,7 +57,7 @@ function SignForm() {
         >
            {currentSlide === 1 && (
             <SwiperSlide>
-            <div className="xs:hidden md:flex h-[59.7vh] w-[27vw] rounded-[30px] p-3 justify-center bg-[url('/signFormImage.png')] bg-cover">
+            <div className="xs:hidden md:flex h-[60vh] w-[27vw] rounded-[30px] p-3 justify-center bg-[url('/signFormImage.png')] bg-cover">
               <div className="">
                 <div className="bg-neutral-400/50 h-[30vh] backdrop-blur-lg rounded-[40px] mt-5 text-center w-[20vw] p-5 flex flex-col justify-center">
                   <p className="text-white text-[1.3rem]">
