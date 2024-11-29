@@ -39,45 +39,40 @@ const Blogs: React.FC = () => {
               data.data.map(({ id, thumbnail, title,slug, author_name}:Blog) => {
                 return (
                   <React.Fragment key={id}>
-                    <motion.div  variants={item} onClick={()=>location(`${'/blog/' +slug}`)} className="item rounded-[20px] text-white  p-3 cursor-pointer md:hover:scale-105 xs:hover:scale-[1.04] duration-500 ">
+                    <motion.div  variants={item} onClick={()=>location(`${'/blog/' +slug}`)} className="rounded-[20px] text-white  p-3 cursor-pointer md:hover:scale-105 xs:hover:scale-[1.04] duration-500 ">
                       <div className=" h-[30vh]">
                         <img
-                          className="w-full h-full object-cover rounded-t-[20px]"
+                          className="w-full h-full object-cover rounded-t-[35px]"
                           src={thumbnail}
                           alt="Picture"
                         />
                       </div>
 
-                      <div className=" bg-white text-black flex justify-between p-3 rounded-b-[20px]">
-                        <div className="flex gap-3 items-center p-2">
-                          <div className="flex flex-col justify-center">
+                      <div className=" bg-white text-black flex justify-between p-2  rounded-b-[35px]">
+                        <div className="flex gap-3 items-center  ">
+                          <div className=" ">
                             <img
-                              className="w-[60px] h-[50p] rounded-[10px] object-cover"
+                              className="w-[50px] h-[50px] rounded-[10px] rounded-bl-[21px] object-cover"
                               src="/logo-dark.jpg"
                               alt="logo"
                             />
                           </div>
                           <div className="flex flex-col gap-1">
-                            <p className="text-[1rem] font-semibold lg:text-[1.6rem]">
+                            <p className="text-[1rem] w-[5vw] font-semibold lg:text-[1.4rem]">
                               {author_name}
                             </p>
-                            <p className="text-stone-600 tetx-[1.4rem] w-[15vw]">
+                            <p className="text-stone-600 text-[1.1rem] w-[6vw] line-clamp-1">
                               {title}
                             </p>
                           </div>
                         </div>
-                        <div className="flex flex-col justify-center items-center gap-2 ">
-                          <div className="text-[1rem] flex gap-2">
-                            Oxundu :
-                            {/* <p className="py-1 rounded-[10px] w-[50px] bg-stone-400 text-center">
-                              {reads}
-                            </p> */}
+                        <div className="flex flex-col justify-center items-center gap-2 px-2 ">
+                          <div className="text-[0.8rem] flex gap-2">
+                            Oxundu : 46
                           </div>
-                          <div className="text-[1rem] flex gap-2">
-                            Bəyənildi :
-                            {/* <p className="py-1 rounded-[10px] w-[50px] bg-stone-400 text-center">
-                              {likes}
-                            </p> */}
+                          <div className="text-[0.8rem]  flex gap-2">
+                            Bəyənildi : 115
+
                           </div>
                         </div>
                       </div>

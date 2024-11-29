@@ -19,7 +19,7 @@ function HomePage() {
     <>
       <div>
         <ScrollAnimation>
-          <div className="container mx-auto md:min-h-[90vh] ">
+          <div className=" px-5 md:min-h-[90vh] ">
             <div className="py-7 ">
               <p className="text-white p-3 text-[1.4rem]">Hamısı</p>
               <div></div>
@@ -35,7 +35,7 @@ function HomePage() {
                 variants={container}
                 initial="hidden"
                 animate="visible"
-                className="container grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-7 xs:place-items-center"
+                className=" grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-7 xs:place-items-center"
               >
                 <Blogs />
               </motion.div>

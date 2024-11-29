@@ -34,14 +34,14 @@ function SingleBlog() {
   return (
     <React.Fragment key={id}>
       <section className="min-h-[74.2vh]">
-       <div className="container mx-auto">
-       <div className="flex justify-between">
+       <div className="px-5">
+       <div className="flex md:flex-row flex-col justify-between">
 
-          <div className="flex flex-col justify-center w-[70vh] h-[70vh]">
-            <img className="rounded-[10px]  object-cover" src={thumbnail} alt="" />
+          <div className="flex justify-between items-center w-[80vw] h-[40vh] md:h-[70vh] md:w-[50vw] ">
+            <img className="rounded-[10px] md:w-[80%] md:h-[80%] object-cover" src={thumbnail} alt="ph0to" />
           </div>
 
-          <div className="p-7 w-[50vw] flex flex-col justify-around">
+          <div className="p-7 md:w-[50vw] flex flex-col justify-around">
              <div className="text-white text-[1.1rem]">{description}</div>
              <div className="text-white text-[1.1rem]">{content}</div>
           </div>

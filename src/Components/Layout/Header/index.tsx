@@ -9,14 +9,14 @@ function Header() {
       <header
         className={`${
           pathname !== "/" ? "bg-gradient-custom " : "bg-neutral-900 "
-        } sticky top-0 flex items-center  z-10`}
+        } sticky top-0 flex items-center justify-between  z-10`}
       >
         <div
           className={`${
             pathname != "/" ? "flex" : "hidden"
           } absolute inset-0 bg-zinc-300/30 backdrop-blur-lg`}
         ></div>
-        <div className="container mx-auto flex justify-between py-3 relative z-20">
+        <div className=" flex justify-between py-3 w-full mx-6 relative z-20">
           <Link to={"/"} className="center-flex gap-2">
             <img
               src={`${pathname === "/login" ? "/logo.jpg" : "/logo-dark.jpg"}`}

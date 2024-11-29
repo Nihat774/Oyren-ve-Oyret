@@ -1,7 +1,9 @@
+
 import ScrollAnimation from "../../Components/animations/ScrollAnimation";
 import SignForm from "../../ui/SignForm";
 
 function SignPage() {
+ 
   return (
     <>
       {/* Desktop */}
