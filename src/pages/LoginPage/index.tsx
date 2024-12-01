@@ -6,7 +6,7 @@ function LoginPage() {
     <>
       {/* Desktop */}
       <ScrollAnimation>
-        <div className="bg-gradient-custom  justify-evenly items-center h-full py-3 xs:hidden md:flex flex-[3]">
+        <div className="bg-gradient-custom justify-evenly items-center py-3 hidden md:flex flex-[4]">
           <div className="text-white flex flex-col">
             <p className=" text-[3rem] font-semibold">Öyrən və Öyrət</p>
             <p className="text-[1.8rem]">platformasına</p>
@@ -17,7 +17,7 @@ function LoginPage() {
       </ScrollAnimation>
       {/* phone */}
       <ScrollAnimation>
-        <div className="xs:flex md:hidden bg-Respons-costum h-[74.7vh] justify-center  items-center">
+        <div className="flex flex-[3] md:hidden bg-Respons-costum h-[74.7vh] justify-center  items-center">
           <LoginForm />
         </div>
       </ScrollAnimation>

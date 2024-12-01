@@ -45,7 +45,7 @@ const Blogs: React.FC = () => {
             <motion.div
               variants={item}
               onClick={() => location(`${"/blog/" + slug}`)}
-              className="rounded-[20px] text-white  p-3 cursor-pointer md:hover:scale-105 xs:hover:scale-[1.04] duration-500 "
+              className="rounded-[20px] text-white  p-3 cursor-pointer md:hover:scale-105 hover:scale-[1.04] duration-500 "
             >
               <div className=" h-[30vh]">
                 <img

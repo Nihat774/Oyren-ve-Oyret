@@ -689,10 +689,6 @@ video {
   height: 50px;
 }
 
-.h-\[59\.7vh\] {
-  height: 59.7vh;
-}
-
 .h-\[60vh\] {
   height: 60vh;
 }
@@ -711,10 +707,6 @@ video {
 
 .h-\[74\.7vh\] {
   height: 74.7vh;
-}
-
-.h-\[7vh\] {
-  height: 7vh;
 }
 
 .h-\[80vh\] {
@@ -786,6 +778,10 @@ video {
   flex: 3;
 }
 
+.flex-\[4\] {
+  flex: 4;
+}
+
 .cursor-pointer {
   cursor: pointer;
 }
@@ -796,6 +792,10 @@ video {
 
 .flex-col {
   flex-direction: column;
+}
+
+.place-items-center {
+  place-items: center;
 }
 
 .items-center {
@@ -997,8 +997,8 @@ video {
   text-align: center;
 }
 
-.text-\[\.8rem\] {
-  font-size: .8rem;
+.text-\[\.9rem\] {
+  font-size: .9rem;
 }
 
 .text-\[0\.8rem\] {
@@ -1223,9 +1223,9 @@ body {
 }
 
 @font-face {
-  font-family: 'MyCustomFont';
+  font-family: "MyCustomFont";
 
-  src: url('/Inter-Italic-VariableFont_opsz,wght.ttf') format('truetype');
+  src: url("/Inter-Italic-VariableFont_opsz,wght.ttf") format("truetype");
 
   font-weight: normal;
 
@@ -1233,11 +1233,26 @@ body {
 }
 
 .bg-gradient-custom {
-  background: linear-gradient(to right,#B16D40, #000000 70%);
+  background: linear-gradient(to right, #b16d40, #000000 70%);
 }
 
 .bg-Respons-costum {
-  background: linear-gradient(167.98deg, #B16D40 0%, #4C2F1B 47.92%, #000000 100%);
+  background: linear-gradient(
+    167.98deg,
+    #b16d40 0%,
+    #4c2f1b 47.92%,
+    #000000 100%
+  );
+}
+
+.container {
+  width: 100%;
+}
+
+.hover\:scale-\[1\.04\]:hover {
+  --tw-scale-x: 1.04;
+  --tw-scale-y: 1.04;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 @media (min-width: 768px) {

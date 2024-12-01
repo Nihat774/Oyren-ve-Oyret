@@ -35,7 +35,7 @@ function HomePage() {
                 variants={container}
                 initial="hidden"
                 animate="visible"
-                className=" grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-7 xs:place-items-center"
+                className=" grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-7 place-items-center"
               >
                 <Blogs />
               </motion.div>
