@@ -8,7 +8,7 @@ function SignPage() {
     <>
       {/* Desktop */}
       <ScrollAnimation>
-        <div className="bg-gradient-custom  justify-evenly h-full items-center py-6 hidden md:flex flex-[4]">
+        <div className="bg-gradient-custom  justify-evenly  items-center py-7 hidden md:flex flex-[4]">
           <div className="text-white flex flex-col">
             <p className=" text-[3rem] font-semibold">Öyrən və Öyrət</p>
             <p className="text-[1.8rem]">platformasına</p>
