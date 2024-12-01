@@ -5,7 +5,7 @@ import SignForm from "../../ui/SignForm";
 function SignPage() {
  
   return (
-    <>
+    <div className="h-full">
       {/* Desktop */}
       <ScrollAnimation>
         <div className="bg-gradient-custom  justify-evenly h-full items-center py-6 xs:hidden md:flex flex-[3]">
@@ -23,7 +23,7 @@ function SignPage() {
           <SignForm />
         </div>
       </ScrollAnimation>
-    </>
+    </div>
   );
 }
 

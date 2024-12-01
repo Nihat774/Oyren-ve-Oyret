@@ -7,9 +7,9 @@ function Header() {
   return (
     <>
       <header
-        className={`${
+        className={`flex-1 ${
           pathname !== "/" ? "bg-gradient-custom " : "bg-neutral-900 "
-        } sticky top-0 flex items-center justify-between  z-10 flex-1`}
+        } sticky top-0 flex items-center justify-between  z-10 `}
       >
         <div
           className={`${
