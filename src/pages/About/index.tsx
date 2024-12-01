@@ -4,8 +4,8 @@ function AboutPage() {
   return (
     <>
       <ScrollAnimation>
-        <div className="bg-neutral-900">
-          <div className="footer-container">
+        <div className="bg-neutral-900 ">
+          <div className="footer-container flex flex-[3]">
             <section className="footer-page">
               <p className="font-bold text-[1.7rem] pb-1 ">Haqqımızda</p>
               <p className="text-[1.12rem]">

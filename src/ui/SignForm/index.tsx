@@ -1,7 +1,7 @@
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import validationSchema from "../../Validations/SampleSchema";
 import { useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
+// import { Swiper, SwiperSlide } from "swiper/react";
 
 function SignForm() {
   const [email, setEmail] = useState("");
@@ -43,20 +43,20 @@ function SignForm() {
     console.log("Token: " );
   }
 
-  const [currentSlide, setCurrentSlide] = useState(1); // Hal-hazırda göstərilən slayd
+  // const [currentSlide, setCurrentSlide] = useState(1); // Hal-hazırda göstərilən slayd
 
-  const handleButtonClick = () => {
-    setCurrentSlide(2); // 2-ci slayd göstəriləcək
-  };
+  // const handleButtonClick = () => {
+  //   setCurrentSlide(2); // 2-ci slayd göstəriləcək
+  // };
   return (
     <>
-      <div className="flex gap-5 p-5 xs:rounded-[25px] xs:h-[65vh] xs:w-[90%] md:w-fit md:h-fit md:rounded-[40px]  bg-neutral-400/50 backdrop-blur-lg">
-        <Swiper
+      <div className="flex  gap-5 p-4 rounded-[25px] h-[65vh] w-[90%] md:w-fit md:h-fit md:rounded-[40px]  bg-neutral-400/50 backdrop-blur-lg">
+        {/* {<Swiper
            slidesPerView={1}
            allowTouchMove={false} // Manuel keçidə icazə verilmir
         >
            {currentSlide === 1 && (
-            <SwiperSlide>
+            <SwiperSlide> */}
             <div className="xs:hidden md:flex h-[60vh] w-[27vw] rounded-[30px] p-3 justify-center bg-[url('/signFormImage.png')] bg-cover">
               <div className="">
                 <div className="bg-neutral-400/50 h-[30vh] backdrop-blur-lg rounded-[40px] mt-5 text-center w-[20vw] p-5 flex flex-col justify-center">
@@ -73,11 +73,11 @@ function SignForm() {
                 </div>
               </div>
             </div>
-          </SwiperSlide> )}
+          {/* </SwiperSlide> )}
 
           {currentSlide === 2 && (
-          <SwiperSlide>
-             <div className="xs:hidden md:flex h-[59.7vh] w-[27vw] rounded-[30px] p-3 justify-center bg-[url('/signFormImage.png')] bg-cover">
+          <SwiperSlide> */}
+             {/* <div className="xs:hidden md:flex h-[59.7vh] w-[27vw] rounded-[30px] p-3 justify-center bg-[url('/signFormImage.png')] bg-cover">
               <div className="">
                 <div className="bg-neutral-400/50 h-[30vh] backdrop-blur-lg rounded-[40px] mt-5 text-center w-[20vw] p-5 flex flex-col justify-center">
                   <p className="text-white text-[1.3rem]">
@@ -92,10 +92,10 @@ function SignForm() {
                   </div>
                 </div>
               </div>
-            </div>
-          </SwiperSlide>
+            </div> */}
+          {/* </SwiperSlide>
         )}
-        </Swiper>
+        </Swiper> } */}
 
         <Formik
           initialValues={{
@@ -160,7 +160,7 @@ function SignForm() {
             <button
               type="submit"
               className="form-button"
-              onClick={handleButtonClick}
+              // onClick={handleButtonClick}
             >
               Növbəti
             </button>
