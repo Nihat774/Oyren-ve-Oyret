@@ -7,13 +7,13 @@ import ScrollTop from "./ui/ToScroll"
 
 function App() {
   return (
-    <>
+    <div className="w-full  h-[100vh]">
      <LayoutComponents>
       <MyRoutes />
       <ScrollTop />
       <ScrollToTop smooth  className="center-flex p-2 "/>
      </LayoutComponents>
-    </>
+    </div>
   )
 }
 
