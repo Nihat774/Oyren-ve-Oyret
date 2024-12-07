@@ -730,6 +730,18 @@ video {
   height: max-content;
 }
 
+.h-\[28vh\] {
+  height: 28vh;
+}
+
+.h-\[62vh\] {
+  height: 62vh;
+}
+
+.h-\[59vh\] {
+  height: 59vh;
+}
+
 .min-h-\[74\.2vh\] {
   min-height: 74.2vh;
 }
@@ -1074,6 +1086,11 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-red-600 {
+  --tw-text-opacity: 1;
+  color: rgb(220 38 38 / var(--tw-text-opacity));
 }
 
 .no-underline {

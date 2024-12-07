@@ -1,26 +1,21 @@
 import { ErrorMessage, Field, Form, Formik } from "formik";
-import validationSchema from "../../Validations/SampleSchema";
 import { useState } from "react";
+import { RegisterSchema } from "../../Validations/SampleSchema";
 // import { Swiper, SwiperSlide } from "swiper/react";
 
 function SignForm() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
 
   // Submit işləmə funksiyası
   function handleSubmit(e: any) {
     e.preventDefault();
-  
 
-    fetch("https://oyrenoyret.koljan.net/public/api/auth/login", {
+    fetch("https://oyrenoyret.koljan.net/public/api/auth/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-       
       },
-      body: JSON.stringify({ email, password }),
-      credentials: "include",
+      body: JSON.stringify({ email: e.email, password: e.password }),
     })
       .then((response) => {
         if (!response.ok) {
@@ -40,29 +35,28 @@ function SignForm() {
         setMessage("Giriş başarısız, bilgilerinizi kontrol edin.");
       });
 
-    console.log("Token: " );
+    console.log("Token: ");
   }
 
   return (
     <>
       <div className="flex  gap-5 p-4 rounded-[25px] h-[65vh] w-[90%] md:w-fit md:h-fit md:rounded-[40px]  bg-neutral-400/50 backdrop-blur-lg">
-            <div className="hidden md:flex h-[60vh] w-[27vw] rounded-[30px] p-3 justify-center bg-[url('/signFormImage.png')] bg-cover">
-              <div className="">
-                <div className="bg-neutral-400/50 h-[30vh] backdrop-blur-lg rounded-[40px] mt-5 text-center w-[20vw] p-5 flex flex-col justify-center">
-                  <p className="text-white text-[1.3rem]">
-                    Sizi yenidən görmək çox xoşdur
-                  </p>
-                </div>
-                <div className="h-[20vh] flex flex-col justify-end items-center">
-                  <div className="flex  bg-red  gap-3">
-                    <p className="w-[60px] rounded-[5px] h-[8px] bg-orange-600 backdrop-blur-lg "></p>
-                    <p className="w-[60px] rounded-[5px] h-[8px] bg-white backdrop-blur-lg "></p>
-                    <p className="w-[60px] rounded-[5px] h-[8px] bg-white backdrop-blur-lg "></p>
-                  </div>
-                </div>
+        <div className="hidden md:flex h-[60vh] w-[27vw] rounded-[30px] p-3 justify-center bg-[url('/signFormImage.png')] bg-cover">
+          <div className="">
+            <div className="bg-neutral-400/50 h-[30vh] backdrop-blur-lg rounded-[40px] mt-5 text-center w-[20vw] p-5 flex flex-col justify-center">
+              <p className="text-white text-[1.3rem]">
+                Sizi yenidən görmək çox xoşdur
+              </p>
+            </div>
+            <div className="h-[20vh] flex flex-col justify-end items-center">
+              <div className="flex  bg-red  gap-3">
+                <p className="w-[60px] rounded-[5px] h-[8px] bg-orange-600 backdrop-blur-lg "></p>
+                <p className="w-[60px] rounded-[5px] h-[8px] bg-white backdrop-blur-lg "></p>
+                <p className="w-[60px] rounded-[5px] h-[8px] bg-white backdrop-blur-lg "></p>
               </div>
             </div>
-
+          </div>
+        </div>
 
         <Formik
           initialValues={{
@@ -71,7 +65,7 @@ function SignForm() {
             repeatPassword: "",
           }}
           onSubmit={(values) => console.log(values)}
-          validationSchema={validationSchema}
+          validationSchema={RegisterSchema}
         >
           <Form
             className="flex flex-col justify-evenly items-center w-full"
@@ -82,10 +76,8 @@ function SignForm() {
               <Field
                 type="text"
                 name="text"
-                value={email}
                 placeholder="E-poçt"
                 className="  md:text-[1.3rem] xs:text-[1.1rem] class-input"
-                onChange={(e: any) => setEmail(e.target.value)}
               />
               <ErrorMessage
                 name="text"
@@ -98,10 +90,8 @@ function SignForm() {
               <Field
                 type="password"
                 name="password"
-                value={password}
                 placeholder="Şifrə"
                 className="class-input md:text-[1.3rem] xs:text-[1.1rem]"
-                onChange={(e: any) => setPassword(e.target.value)}
               />
               <ErrorMessage
                 name="password"
@@ -123,11 +113,8 @@ function SignForm() {
                 render={(msg) => <div className="error-message">{msg}</div>}
               />
             </label>
-            {message}
-            <button
-              type="submit"
-              className="form-button"
-            >
+            <p className="text-red-600">{message}</p>
+            <button type="submit" className="form-button">
               Növbəti
             </button>
           </Form>

@@ -8,7 +8,7 @@ function LoginPage() {
     <div className="h-full ">
       {/* Desktop */}
 
-        {/* <div className="bg-gradient-custom  justify-evenly items-center h-full py-3 xs:hidden md:flex "> */}
+        {/* <div className="bg-gradient-custom justify-evenly items-center h-full py-3 xs:hidden md:flex "> */}
 
       <ScrollAnimation>
         <div className="bg-gradient-custom justify-evenly items-center py-5 hidden md:flex flex-[4]">
@@ -23,7 +23,7 @@ function LoginPage() {
       </ScrollAnimation>
       {/* phone */}
 
-        <div className="xs:flex md:hidden bg-Respons-costum h-[74.7vh] justify-center  items-center">
+        <div className="flex md:hidden bg-Respons-costum h-[74.7vh] justify-center  items-center">
 
       <ScrollAnimation>
         <div className="flex flex-[4] md:hidden bg-Respons-costum h-[74.7vh] justify-center  items-center">
