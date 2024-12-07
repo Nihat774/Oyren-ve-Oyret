@@ -35,7 +35,7 @@ function SingleBlog() {
     <React.Fragment key={id}>
       <section className="min-h-[74.2vh]">
        <div className="px-5">
-       <div className="flex md:flex-row flex-col justify-between">
+       <div className="flex md:flex-row flex-col justify-between flex-[4]">
 
           <div className="flex justify-between items-center w-[80vw] h-[40vh] md:h-[70vh] md:w-[50vw] ">
             <img className="rounded-[10px] md:w-[80%] md:h-[80%] object-cover" src={thumbnail} alt="ph0to" />

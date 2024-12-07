@@ -8,7 +8,7 @@ function SignPage() {
     <div className="h-full">
       {/* Desktop */}
       <ScrollAnimation>
-        <div className="bg-gradient-custom  justify-evenly h-full items-center py-6 xs:hidden md:flex flex-[3]">
+        <div className="bg-gradient-custom  justify-evenly  items-center py-7 hidden md:flex flex-[4]">
           <div className="text-white flex flex-col">
             <p className=" text-[3rem] font-semibold">Öyrən və Öyrət</p>
             <p className="text-[1.8rem]">platformasına</p>
@@ -19,7 +19,7 @@ function SignPage() {
       </ScrollAnimation>
       {/* phone */}
       <ScrollAnimation>
-        <div className="xs:flex md:hidden bg-Respons-costum h-[74.2vh] justify-center items-center">
+        <div className="flex md:hidden bg-Respons-costum h-[74.2vh] justify-center items-center">
           <SignForm />
         </div>
       </ScrollAnimation>
