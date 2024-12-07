@@ -17,7 +17,7 @@ function LoginPage() {
       </ScrollAnimation>
       {/* phone */}
       <ScrollAnimation>
-        <div className="flex flex-[3] md:hidden bg-Respons-costum h-[74.7vh] justify-center  items-center">
+        <div className="flex flex-[4] md:hidden bg-Respons-costum h-[74.7vh] justify-center  items-center">
           <LoginForm />
         </div>
       </ScrollAnimation>
